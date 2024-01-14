@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/276c48e422.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <img src="images/meeee_edited.jpg" id="header-img">
+            <h1>Hi, I'm <span>Justin</span><br>Ho from UCI</h1>
+        </div>
+    </div>
+</div>
+<!--------------------------about------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Software Engineer.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p2>Motivated student completing a bachelor of science software engineering degree. Committed to learning and developing skills in computing software and team contribution with hands-on learning and development work.  Self-sufficient while being a collaborative thinker.  Adept to rapidly changing work environments and finding the best course of action. </p2>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('extracurriculars')">Extracurriculars</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        
+                        <li><span>2023 - 2027</span><br>Bachelor of Science Software Engineering | University of California Irvine</li>
+                    
+                    </ul>
+                </div>
+                <div class="tab-contents"id="experience">
+                    <ul>
+                        <li><span>2020 - 2023</span><br>Ladyfingers Cakes, Retail Sales Associate</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents"id="extracurriculars">
+                    <ul>
+                        <li><span>2021 - 2022</span><br>QXQ'S INTRODUCTION TO QUANTUM COMPUTING</li>
+                        <li><span>2022 - 2023</span><br>KIPP KING ROBOTICS </li>
+                        <li><span>2019 - 2023</span><br>KIPP KING KEYCLUB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------------contact------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me!</h1>
+                <p><i class="fa-solid fa-envelope"></i>chakh1@uci.edu</p>
+                <p><i class="fa-solid fa-phone"></i>510-501-2581</p>
+                <div class="social-icons">
+                <a href="https://www.linkedin.com/in/chakjustinho/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/justinhochomo"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.instagram.com/boyundoodoo/"><i class="fa-brands fa-square-instagram"></i></i></a>
+                </div>
+            <a href="images/Resume (1).pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"></div>
+    <p>Copright © Justin Ho </p>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+</body>
+</html>
